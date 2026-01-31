@@ -2,6 +2,6 @@
   "name": "debashismoharana",
   "compatibility_date": "2026-01-30",
   "assets": {
-    "directory": "./out"
+    "directory": "./public"
   }
 }
