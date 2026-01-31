@@ -1,7 +1,5 @@
 {
   "name": "debashismoharana",
   "compatibility_date": "2026-01-30",
-  "assets": {
-    "directory": "./public"
-  }
+  "pages_build_output_dir": ".next"
 }
