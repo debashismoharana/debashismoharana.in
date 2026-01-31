@@ -5,7 +5,7 @@ const person: Person = {
   firstName: "Debashis",
   lastName: "Moharana",
   name: `Debashis Moharana`,
-  role: "Design Engineer",
+  role: "Software Engineer",
   avatar: "/images/avatar.jpg",
   email: "moharana.debashis@gmail.com",
   location: "Asia/Kolkata", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
@@ -70,7 +70,7 @@ const home: Home = {
   },
   subline: (
     <>
-    I'm Debashis, a software developer at <Text as="span" size="xl" weight="strong">ONCE UI</Text>, where I craft intuitive <br /> user experiences. After hours, I build my own projects.
+    I'm Debashis, a software Engineer at <Text as="span" size="xl" weight="strong">ONCE UI</Text>, where I craft intuitive <br /> user experiences. After hours, I build my own projects.
 </>
   ),
 };
