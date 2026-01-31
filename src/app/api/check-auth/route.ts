@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+export const runtime = 'edge';
 import * as cookie from "cookie";
 
 export async function GET(request: NextRequest) {
