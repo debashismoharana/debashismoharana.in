@@ -54,7 +54,7 @@ const home: Home = {
   label: "Home",
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Building bridges between design and code</>,
+  headline: <>Turning quiet ideas into living experiences</>,
   featured: {
     display: true,
     title: (
@@ -70,8 +70,11 @@ const home: Home = {
   },
   subline: (
     <>
-    I'm Debashis, a software Engineer at <Text as="span" size="xl" weight="strong">ONCE UI</Text>, where I craft intuitive <br /> user experiences. After hours, I build my own projects.
-</>
+      I’m Debashis, a software developer focused on building clean, practical user experiences on the web and mobile. <br />
+      Beyond that, I explore ideas around travel, visual storytelling, and using technology to solve real, everyday problems.
+      I enjoy building things slowly and thoughtfully—learning, experimenting, and refining along the way.
+      <br />My interests extend to yoga, Kalaripayattu, and specialty coffee, each rooted in attention, balance, and respect for process.
+    </>
   ),
 };
 
@@ -96,9 +99,10 @@ const about: About = {
     title: "Introduction",
     description: (
       <>
-        Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
-        into simple, elegant design solutions. Her work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
+        I’m Debashis, a software developer focused on building clean, practical user experiences on the web and mobile. <br />
+        Beyond that, I explore ideas around travel, visual storytelling, and using technology to solve real, everyday problems.
+        I enjoy building things slowly and thoughtfully—learning, experimenting, and refining along the way.
+        <br />My interests extend to yoga, Kalaripayattu, and specialty coffee, each rooted in attention, balance, and respect for process.
       </>
     ),
   },
