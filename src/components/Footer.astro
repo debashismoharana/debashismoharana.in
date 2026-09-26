@@ -1,9 +1,9 @@
 ---
 import type { SiteConfig } from "@types";
 
-type Props = Pick<SiteConfig, "author" | "socialLinks">;
+type Props = Pick<SiteConfig, "author">;
 
-const { author, socialLinks } = Astro.props;
+const { author } = Astro.props;
 const currentYear = new Date().getFullYear();
 ---
 
