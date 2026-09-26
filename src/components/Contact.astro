@@ -1,11 +1,10 @@
 ---
 interface Props {
-  email: string;
   socialLinks: { text: string; href: string }[];
   contactFormKey?: string;
 }
 
-const { email, socialLinks, contactFormKey } = Astro.props;
+const { socialLinks, contactFormKey } = Astro.props;
 
 const getIcon = (name: string) => {
   const icons: Record<string, string> = {
@@ -173,9 +172,10 @@ const getIcon = (name: string) => {
     });
 
     function showSuccess() {
+      if (!form || !successMessage) return;
       form.classList.add('opacity-0', 'pointer-events-none');
       setTimeout(() => {
-        successMessage.classList.remove('opacity-0', 'pointer-events-none');
+        successMessage?.classList.remove('opacity-0', 'pointer-events-none');
       }, 300);
     }
   }
