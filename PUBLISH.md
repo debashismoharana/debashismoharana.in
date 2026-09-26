@@ -46,3 +46,19 @@ npx vercel --prod
 If you want to host it for free on GitHub Pages:
 1. Update your `astro.config.mjs` with your site URL and `base` path (if applicable).
 2. Follow Astro's [GitHub Pages deployment guide](https://docs.astro.build/en/guides/deploy/github/).
+
+## 3rd Party Dependencies
+
+### Web3Forms (Contact Form)
+This portfolio uses [Web3Forms](https://web3forms.com) to process form submissions without needing a backend server. 
+To enable the contact form on your live site:
+1. Go to the Web3Forms website and create an Access Key using your email address.
+2. Open `src/config/index.ts`.
+3. Add your key to the `contactFormKey` property in the `SITE_CONFIG` object.
+   ```typescript
+   export const SITE_CONFIG: SiteConfig = {
+     // ...
+     contactFormKey: "YOUR_WEB3FORMS_ACCESS_KEY_HERE",
+   };
+   ```
+If you do not provide a key, the contact form will operate in "mock" mode, simulating a successful form submission for local testing and UI demonstration purposes.
