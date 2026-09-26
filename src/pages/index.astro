@@ -12,28 +12,28 @@ const theOtherSideData = SITE_CONTENT.theOtherSide;
 ---
 
 <Layout>
-  <Hero {...SITE_CONTENT.hero} />
-
   <!-- Toggle Switch -->
-  <div class="flex justify-center mb-16">
-    <div class="bg-[#12161d] p-1.5 rounded-full inline-flex relative overflow-hidden border border-neutral/20">
-      <div id="toggle-indicator" class="absolute top-1.5 bottom-1.5 left-1.5 w-[calc(50%-6px)] bg-primary rounded-full transition-transform duration-300 ease-in-out"></div>
+  <div class="flex justify-center mt-6 mb-4">
+    <div class="bg-[#12161d] p-1.5 rounded-full flex relative border border-neutral/20 w-max">
+      <div id="toggle-indicator" class="absolute top-1.5 bottom-1.5 left-1.5 w-36 bg-primary rounded-full transition-transform duration-300 ease-in-out"></div>
       
       <button 
         id="btn-professional" 
-        class="relative z-10 px-8 py-3 text-sm font-medium rounded-full transition-colors duration-300 text-[#12161d]"
+        class="relative z-10 w-36 py-2.5 text-sm font-medium rounded-full transition-colors duration-300 text-[#12161d] text-center"
       >
         Professional
       </button>
       
       <button 
         id="btn-personal" 
-        class="relative z-10 px-8 py-3 text-sm font-medium rounded-full transition-colors duration-300 text-white"
+        class="relative z-10 w-36 py-2.5 text-sm font-medium rounded-full transition-colors duration-300 text-white text-center"
       >
         Personal
       </button>
     </div>
   </div>
+
+  <Hero {...SITE_CONTENT.hero} />
 
   <!-- Professional Content -->
   <div id="content-professional" class="transition-opacity duration-300">
@@ -92,9 +92,11 @@ const theOtherSideData = SITE_CONTENT.theOtherSide;
   
   const heroProfessional = document.getElementById('hero-professional');
   const heroPersonal = document.getElementById('hero-personal');
+  const heroSpecialtyProfessional = document.getElementById('hero-specialty-professional');
+  const heroSpecialtyPersonal = document.getElementById('hero-specialty-personal');
 
   function switchTab(tab: 'professional' | 'personal') {
-    if (!btnProfessional || !btnPersonal || !contentProfessional || !contentPersonal || !toggleIndicator || !heroProfessional || !heroPersonal) return;
+    if (!btnProfessional || !btnPersonal || !contentProfessional || !contentPersonal || !toggleIndicator || !heroProfessional || !heroPersonal || !heroSpecialtyProfessional || !heroSpecialtyPersonal) return;
 
     if (tab === 'professional') {
       // Move indicator
@@ -110,24 +112,28 @@ const theOtherSideData = SITE_CONTENT.theOtherSide;
       // Switch content & hero
       contentPersonal.classList.add('opacity-0');
       heroPersonal.classList.add('opacity-0');
+      heroSpecialtyPersonal.classList.add('opacity-0');
       
       setTimeout(() => {
         contentPersonal.classList.add('hidden');
         heroPersonal.classList.add('hidden');
+        heroSpecialtyPersonal.classList.add('hidden');
         
         contentProfessional.classList.remove('hidden');
         heroProfessional.classList.remove('hidden');
+        heroSpecialtyProfessional.classList.remove('hidden');
         
         // Small delay to allow display:block to apply before animating opacity
         setTimeout(() => {
           contentProfessional.classList.remove('opacity-0');
           heroProfessional.classList.remove('opacity-0');
+          heroSpecialtyProfessional.classList.remove('opacity-0');
         }, 20);
       }, 300);
 
     } else {
       // Move indicator
-      toggleIndicator.style.transform = 'translateX(100%)';
+      toggleIndicator.style.transform = 'translateX(144px)';
       
       // Update text colors
       btnPersonal.classList.add('text-[#12161d]');
@@ -139,17 +145,21 @@ const theOtherSideData = SITE_CONTENT.theOtherSide;
       // Switch content & hero
       contentProfessional.classList.add('opacity-0');
       heroProfessional.classList.add('opacity-0');
+      heroSpecialtyProfessional.classList.add('opacity-0');
       
       setTimeout(() => {
         contentProfessional.classList.add('hidden');
         heroProfessional.classList.add('hidden');
+        heroSpecialtyProfessional.classList.add('hidden');
         
         contentPersonal.classList.remove('hidden');
         heroPersonal.classList.remove('hidden');
+        heroSpecialtyPersonal.classList.remove('hidden');
         
         setTimeout(() => {
           contentPersonal.classList.remove('opacity-0');
           heroPersonal.classList.remove('opacity-0');
+          heroSpecialtyPersonal.classList.remove('opacity-0');
         }, 20);
       }, 300);
     }
