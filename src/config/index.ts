@@ -15,6 +15,7 @@ export const SITE_CONFIG: SiteConfig = {
   socialLinks: [
     { text: "LinkedIn", href: "https://www.linkedin.com/in/debashismoharana/" },
     { text: "Github", href: "https://github.com/debashismoharana" },
+    { text: "Instagram", href: "https://www.instagram.com/debashis_moharana/" },
     { text: "Email", href: "mailto:moharana.debashis@gmail.com" },
   ],
   socialImage: "/avatar.jpg",
