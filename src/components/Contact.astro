@@ -1,0 +1,87 @@
+---
+import Section from "./Section.astro";
+
+interface Props {
+  email: string;
+  socialLinks: { text: string; href: string }[];
+}
+
+const { email, socialLinks } = Astro.props;
+---
+
+<Section text="Contact" href="contact">
+  <div class="grid grid-cols-1 gap-12 md:grid-cols-2">
+    <!-- Social Links and Info -->
+    <div>
+      <h3 class="mb-5 font-serif text-3xl font-medium text-white">
+        Let's Connect
+      </h3>
+      <p class="mb-8 text-lg text-neutral">
+        Whether you have a question, a project idea, or just want to chat about code and coffee, I'm always open to new connections.
+      </p>
+      
+      <div class="flex flex-col gap-4">
+        {
+          socialLinks.map((link) => (
+            <a
+              href={link.href}
+              target="_blank"
+              class="text-primary hover:text-white transition-colors hover:underline w-max text-lg"
+            >
+              {link.text}
+            </a>
+          ))
+        }
+      </div>
+    </div>
+
+    <!-- Basic Contact Form -->
+    <div class="rounded-3xl border border-neutral/20 bg-[#12161d] p-8">
+      <form action={`mailto:${email}`} method="POST" enctype="text/plain" class="flex flex-col gap-5">
+        
+        <div class="flex flex-col gap-2">
+          <label for="name" class="text-sm text-neutral-light">Name</label>
+          <input 
+            type="text" 
+            id="name" 
+            name="name" 
+            required
+            class="rounded-xl border border-neutral/20 bg-black px-4 py-3 text-white focus:border-primary focus:outline-none transition-colors"
+            placeholder="Your Name"
+          />
+        </div>
+
+        <div class="flex flex-col gap-2">
+          <label for="email" class="text-sm text-neutral-light">Email</label>
+          <input 
+            type="email" 
+            id="email" 
+            name="email" 
+            required
+            class="rounded-xl border border-neutral/20 bg-black px-4 py-3 text-white focus:border-primary focus:outline-none transition-colors"
+            placeholder="your@email.com"
+          />
+        </div>
+
+        <div class="flex flex-col gap-2">
+          <label for="message" class="text-sm text-neutral-light">Message</label>
+          <textarea 
+            id="message" 
+            name="message" 
+            rows="4" 
+            required
+            class="rounded-xl border border-neutral/20 bg-black px-4 py-3 text-white focus:border-primary focus:outline-none transition-colors resize-none"
+            placeholder="How can I help?"
+          ></textarea>
+        </div>
+
+        <button 
+          type="submit" 
+          class="mt-2 rounded-full bg-primary py-4 text-sm font-medium text-white hover:bg-primary/90 transition-colors"
+        >
+          Send Message
+        </button>
+      </form>
+    </div>
+  </div>
+</Section>
