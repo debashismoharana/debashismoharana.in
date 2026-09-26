@@ -4,14 +4,132 @@ import Hero from "@components/Hero.astro";
 import Layout from "@layouts/Layout.astro";
 import Experience from "@components/Experience.astro";
 import Projects from "@components/Projects.astro";
-import About from "@components/About.astro";
 
 import "../styles/global.css";
+
+const theOtherSideData = SITE_CONTENT.theOtherSide;
 ---
 
 <Layout>
   <Hero {...SITE_CONTENT.hero} />
-  <Experience experience={SITE_CONTENT.experience} />
-  <Projects projects={SITE_CONTENT.projects} />
-  <About {...SITE_CONTENT.about} name={SITE_CONTENT.hero.name} />
+
+  <!-- Toggle Switch -->
+  <div class="flex justify-center mb-16">
+    <div class="bg-[#12161d] p-1.5 rounded-full inline-flex relative overflow-hidden border border-neutral/20">
+      <div id="toggle-indicator" class="absolute top-1.5 bottom-1.5 left-1.5 w-[calc(50%-6px)] bg-primary rounded-full transition-transform duration-300 ease-in-out"></div>
+      
+      <button 
+        id="btn-professional" 
+        class="relative z-10 px-8 py-3 text-sm font-medium rounded-full transition-colors duration-300 text-[#12161d]"
+      >
+        Professional
+      </button>
+      
+      <button 
+        id="btn-personal" 
+        class="relative z-10 px-8 py-3 text-sm font-medium rounded-full transition-colors duration-300 text-white"
+      >
+        Personal
+      </button>
+    </div>
+  </div>
+
+  <!-- Professional Content -->
+  <div id="content-professional" class="transition-opacity duration-300">
+    <Experience experience={SITE_CONTENT.experience} />
+    <Projects projects={SITE_CONTENT.projects} />
+  </div>
+
+  <!-- Personal Content -->
+  <div id="content-personal" class="hidden opacity-0 transition-opacity duration-300">
+    <section class="pb-24">
+      <h2 class="mb-6 font-serif text-5xl font-bold tracking-tightest text-white sm:text-6xl">
+        The Other Side
+      </h2>
+      <p class="mb-12 text-xl font-normal text-neutral leading-relaxed max-w-3xl">
+        Beyond the code, here is a glimpse into what keeps me inspired, grounded, and caffeinated.
+      </p>
+
+      <div class="grid grid-cols-1 gap-8 sm:grid-cols-2">
+        {
+          theOtherSideData.items.map(({ title, description, link }) => (
+            <div class="rounded-3xl border border-neutral/20 bg-[#12161d] p-8 hover:bg-[#1c232d]/80 transition-colors flex flex-col justify-between group">
+              <div>
+                  <h3 class="mb-4 font-serif text-3xl font-medium text-primary">
+                  {title}
+                  </h3>
+                  <p class="text-lg text-neutral mb-8 leading-relaxed group-hover:text-neutral-light transition-colors">{description}</p>
+              </div>
+              {link && (
+                <div>
+                  <a
+                    href={link}
+                    target="_blank"
+                    class="inline-block rounded-full bg-primary/20 px-6 py-3 text-sm leading-5 font-medium text-primary hover:bg-primary hover:text-white transition-colors"
+                  >
+                    View More
+                  </a>
+                </div>
+              )}
+            </div>
+          ))
+        }
+      </div>
+    </section>
+  </div>
 </Layout>
+
+<script>
+  const btnProfessional = document.getElementById('btn-professional');
+  const btnPersonal = document.getElementById('btn-personal');
+  const contentProfessional = document.getElementById('content-professional');
+  const contentPersonal = document.getElementById('content-personal');
+  const toggleIndicator = document.getElementById('toggle-indicator');
+
+  function switchTab(tab: 'professional' | 'personal') {
+    if (!btnProfessional || !btnPersonal || !contentProfessional || !contentPersonal || !toggleIndicator) return;
+
+    if (tab === 'professional') {
+      // Move indicator
+      toggleIndicator.style.transform = 'translateX(0)';
+      
+      // Update text colors
+      btnProfessional.classList.add('text-[#12161d]');
+      btnProfessional.classList.remove('text-white');
+      
+      btnPersonal.classList.add('text-white');
+      btnPersonal.classList.remove('text-[#12161d]');
+
+      // Switch content
+      contentPersonal.classList.add('opacity-0');
+      setTimeout(() => {
+        contentPersonal.classList.add('hidden');
+        contentProfessional.classList.remove('hidden');
+        // Small delay to allow display:block to apply before animating opacity
+        setTimeout(() => contentProfessional.classList.remove('opacity-0'), 20);
+      }, 300);
+
+    } else {
+      // Move indicator
+      toggleIndicator.style.transform = 'translateX(100%)';
+      
+      // Update text colors
+      btnPersonal.classList.add('text-[#12161d]');
+      btnPersonal.classList.remove('text-white');
+      
+      btnProfessional.classList.add('text-white');
+      btnProfessional.classList.remove('text-[#12161d]');
+
+      // Switch content
+      contentProfessional.classList.add('opacity-0');
+      setTimeout(() => {
+        contentProfessional.classList.add('hidden');
+        contentPersonal.classList.remove('hidden');
+        setTimeout(() => contentPersonal.classList.remove('opacity-0'), 20);
+      }, 300);
+    }
+  }
+
+  btnProfessional?.addEventListener('click', () => switchTab('professional'));
+  btnPersonal?.addEventListener('click', () => switchTab('personal'));
+</script>

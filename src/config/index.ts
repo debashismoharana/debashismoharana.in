@@ -10,7 +10,6 @@ export const SITE_CONFIG: SiteConfig = {
   navLinks: [
     { text: "Experience", href: "#experience" },
     { text: "Projects", href: "#projects" },
-    { text: "About", href: "#about" },
   ],
   socialLinks: [
     { text: "LinkedIn", href: "https://www.linkedin.com/in/debashismoharana/" },
@@ -26,7 +25,7 @@ export const SITE_CONTENT: SiteContent = {
     name: "Debashis Moharana",
     specialty: "Senior Frontend Engineer",
     summary:
-      "Senior Frontend Engineer with 10+ years of experience architecting and delivering enterprise-grade web and hybrid mobile applications. Deep specialist in Angular, Ionic, TypeScript, React.js, and Micro-frontend architecture.",
+      "Senior Frontend Engineer with 10+ years of experience architecting and delivering enterprise-grade web and hybrid mobile applications. Deep specialist in Angular, Ionic, TypeScript, React.js, and Micro-frontend architecture. Outside of tech, I am passionate about yoga, Kalaripayattu, and the precise art of specialty coffee.",
     email: "moharana.debashis@gmail.com",
   },
   experience: [
@@ -80,14 +79,25 @@ export const SITE_CONTENT: SiteContent = {
       image: "/avatar.jpg",
     }
   ],
-  about: {
-    description: `
-      I’m Debashis, a Senior Frontend Engineer based in Pune, India, with over a decade of experience designing and developing enterprise-grade web and hybrid mobile applications.
-
-      Throughout my career, I've worked on large-scale applications, leading frontend teams and driving architectural modernization using Angular, Ionic, TypeScript, React, and Micro-frontends. I enjoy solving complex performance problems, streamlining CI/CD workflows, and collaborating across teams to deliver premium user experiences.
-      
-      Outside of tech, I am passionate about yoga, Kalaripayattu, and the precise art of specialty coffee—activities that help me maintain balance and a focus on craftsmanship in everything I do.
-    `,
-    image: "/avatar.jpg",
+  theOtherSide: {
+    items: [
+      {
+        title: "Photography & Reels",
+        description: "Capturing moments and creating visual stories. Check out my latest reels and photos on Instagram.",
+        link: "https://www.instagram.com/debashis_moharana/",
+      },
+      {
+        title: "The Perfect Pour",
+        description: "I'm a huge fan of black coffee. Currently exploring single-origin beans and perfecting my pour-over technique.",
+      },
+      {
+        title: "Crystal Collection",
+        description: "Fascinated by geology and the natural beauty of crystals. I enjoy curating a small but growing collection of unique pieces.",
+      },
+      {
+        title: "Travels",
+        description: "Always looking for the next adventure. I love exploring new places, experiencing different cultures, and documenting the journey.",
+      },
+    ],
   },
 };
