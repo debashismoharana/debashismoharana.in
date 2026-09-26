@@ -19,6 +19,7 @@ export const SITE_CONFIG: SiteConfig = {
   ],
   socialImage: "/avatar.jpg",
   canonicalURL: "https://debashismoharana.in",
+  contactFormKey: "db25aae9-9f5e-4495-8934-0a563adb5e55", // Add your Web3Forms access key here to enable email routing
 };
 
 export const SITE_CONTENT: SiteContent = {

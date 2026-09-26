@@ -6,6 +6,7 @@ export interface SiteConfig extends HeaderProps {
   socialLinks: { text: string; href: string }[];
   socialImage: string;
   canonicalURL?: string;
+  contactFormKey?: string;
 }
 
 export interface SiteContent {
