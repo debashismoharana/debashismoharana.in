@@ -1,10 +1,10 @@
 import type { SiteConfig, SiteContent } from "../types";
 
 export const SITE_CONFIG: SiteConfig = {
-  title: "Debashis Moharana — Senior Frontend Engineer",
+  title: "Debashis Moharana — Software Developer",
   author: "Debashis Moharana",
   description:
-    "Senior Frontend Engineer based in Pune, India. I specialize in building scalable web and hybrid mobile applications.",
+    "Software Developer based in Pune, India. I specialize in building scalable web and hybrid mobile applications.",
   lang: "en",
   siteLogo: "/avatar.jpg",
   navLinks: [
@@ -25,9 +25,9 @@ export const SITE_CONFIG: SiteConfig = {
 export const SITE_CONTENT: SiteContent = {
   hero: {
     name: "Debashis Moharana",
-    specialty: "Senior Frontend Engineer",
+    specialty: "Software Developer",
     summary:
-      "Senior Frontend Engineer with 10+ years of experience specializing in building scalable web and hybrid mobile applications.",
+      "Software Developer with 10+ years of experience specializing in building scalable web and hybrid mobile applications.",
     email: "moharana.debashis@gmail.com",
   },
   experience: [
@@ -55,7 +55,7 @@ export const SITE_CONTENT: SiteContent = {
   projects: [],
   about: {
     description: `
-      I’m Debashis, a Senior Frontend Engineer based in Pune, India, with over a decade of experience designing and developing enterprise-grade web and hybrid mobile applications.
+      I’m Debashis, a Software Developer based in Pune, India, with over a decade of experience designing and developing enterprise-grade web and hybrid mobile applications.
 
       Throughout my career, I've worked on large-scale applications, leading frontend teams and driving architectural modernization using Angular, Ionic, TypeScript, React, and Micro-frontends. I enjoy solving complex performance problems, streamlining CI/CD workflows, and collaborating across teams to deliver premium user experiences.
       

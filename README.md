@@ -1,6 +1,6 @@
 # Debashis Moharana - Personal Portfolio
 
-Personal portfolio website for Debashis Moharana, a Senior Frontend Engineer based in Pune, India. 
+Personal portfolio website for Debashis Moharana, a Software Developer based in Pune, India. 
 
 This site is built using **Astro**, a fast, static-site generator, utilizing the `astro-zen` minimalist theme and TailwindCSS.
 
