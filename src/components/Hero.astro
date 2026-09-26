@@ -2,10 +2,10 @@
 import type { HeroProps } from "@types";
 type Props = HeroProps;
 
-const { name, specialty, summary, email } = Astro.props;
+const { name, specialty, professionalSummary, personalSummary, email } = Astro.props;
 ---
 
-<section class="pt-24 pb-12 md:pt-32 md:pb-12" id="#hero">
+<section class="pt-24 pb-8 md:pt-32 md:pb-8" id="#hero">
   <h1
     class="mb-1.5 font-serif text-7xl font-bold tracking-tightest text-white sm:text-8xl md:mb-0 md:text-9xl"
   >
@@ -16,7 +16,10 @@ const { name, specialty, summary, email } = Astro.props;
   >
     {specialty}
   </p>
-  <p class="mb-4 text-base font-normal text-neutral md:text-lg max-w-3xl">
-    {summary}
+  <p id="hero-professional" class="mb-4 text-base font-normal text-neutral md:text-lg max-w-4xl leading-relaxed transition-opacity duration-300">
+    {professionalSummary}
+  </p>
+  <p id="hero-personal" class="mb-4 text-base font-normal text-neutral md:text-lg max-w-4xl leading-relaxed hidden opacity-0 transition-opacity duration-300">
+    {personalSummary}
   </p>
 </section>

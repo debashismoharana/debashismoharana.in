@@ -89,9 +89,12 @@ const theOtherSideData = SITE_CONTENT.theOtherSide;
   const contentProfessional = document.getElementById('content-professional');
   const contentPersonal = document.getElementById('content-personal');
   const toggleIndicator = document.getElementById('toggle-indicator');
+  
+  const heroProfessional = document.getElementById('hero-professional');
+  const heroPersonal = document.getElementById('hero-personal');
 
   function switchTab(tab: 'professional' | 'personal') {
-    if (!btnProfessional || !btnPersonal || !contentProfessional || !contentPersonal || !toggleIndicator) return;
+    if (!btnProfessional || !btnPersonal || !contentProfessional || !contentPersonal || !toggleIndicator || !heroProfessional || !heroPersonal) return;
 
     if (tab === 'professional') {
       // Move indicator
@@ -104,13 +107,22 @@ const theOtherSideData = SITE_CONTENT.theOtherSide;
       btnPersonal.classList.add('text-white');
       btnPersonal.classList.remove('text-[#12161d]');
 
-      // Switch content
+      // Switch content & hero
       contentPersonal.classList.add('opacity-0');
+      heroPersonal.classList.add('opacity-0');
+      
       setTimeout(() => {
         contentPersonal.classList.add('hidden');
+        heroPersonal.classList.add('hidden');
+        
         contentProfessional.classList.remove('hidden');
+        heroProfessional.classList.remove('hidden');
+        
         // Small delay to allow display:block to apply before animating opacity
-        setTimeout(() => contentProfessional.classList.remove('opacity-0'), 20);
+        setTimeout(() => {
+          contentProfessional.classList.remove('opacity-0');
+          heroProfessional.classList.remove('opacity-0');
+        }, 20);
       }, 300);
 
     } else {
@@ -124,12 +136,21 @@ const theOtherSideData = SITE_CONTENT.theOtherSide;
       btnProfessional.classList.add('text-white');
       btnProfessional.classList.remove('text-[#12161d]');
 
-      // Switch content
+      // Switch content & hero
       contentProfessional.classList.add('opacity-0');
+      heroProfessional.classList.add('opacity-0');
+      
       setTimeout(() => {
         contentProfessional.classList.add('hidden');
+        heroProfessional.classList.add('hidden');
+        
         contentPersonal.classList.remove('hidden');
-        setTimeout(() => contentPersonal.classList.remove('opacity-0'), 20);
+        heroPersonal.classList.remove('hidden');
+        
+        setTimeout(() => {
+          contentPersonal.classList.remove('opacity-0');
+          heroPersonal.classList.remove('opacity-0');
+        }, 20);
       }, 300);
     }
   }

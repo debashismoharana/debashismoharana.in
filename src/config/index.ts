@@ -25,8 +25,10 @@ export const SITE_CONTENT: SiteContent = {
   hero: {
     name: "Debashis Moharana",
     specialty: "Senior Frontend Engineer",
-    summary:
-      "Senior Frontend Engineer with 10+ years of experience architecting and delivering enterprise-grade web and hybrid mobile applications. Deep specialist in Angular, Ionic, TypeScript, React.js, and Micro-frontend architecture. Outside of tech, I am passionate about yoga, Kalaripayattu, and the precise art of specialty coffee.",
+    professionalSummary:
+      "I’m a Frontend Lead and software developer with over 10 years of experience building web and hybrid mobile applications. My core expertise lies in Angular, Ionic, TypeScript, JavaScript, HTML, and CSS, with experience across React, Node.js, and modern cloud platforms. I enjoy designing scalable frontend architectures, solving complex engineering problems, and building products that balance performance, usability, and maintainability. Over the years, I’ve worked across the full lifecycle of products, from defining architecture and technical direction to mentoring developers and shipping production systems. I’m currently exploring AI engineering, LLM applications, RAG, AI agents, and developer automation to expand my capabilities beyond traditional frontend development.",
+    personalSummary:
+      "Outside of code, I’m drawn to things that combine creativity, exploration, and craft. I enjoy travelling, discovering heritage and culture, and creating visual stories through photography and short-form content. Specialty coffee is another obsession, and I enjoy experimenting with different beans, brewing methods, and the ritual of making a good cup. I also spend time with plants, home decor, fitness, yoga, and other creative projects that let me slow down and build something with my hands. I’m naturally curious and tend to go deep into whatever catches my interest, whether it’s learning a new technology, exploring a place, or understanding how something works.",
     email: "moharana.debashis@gmail.com",
   },
   experience: [
