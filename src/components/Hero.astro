@@ -2,7 +2,7 @@
 import type { HeroProps } from "@types";
 type Props = HeroProps;
 
-const { name, professionalSpecialty, personalSpecialty, professionalSummary, personalSummary } = Astro.props;
+const { name, professionalSpecialty, professionalSubtitle, personalSpecialty, professionalSummary, personalSummary } = Astro.props;
 ---
 
 <section class="pb-8 md:pb-8 pt-4" id="#hero">
@@ -11,9 +11,16 @@ const { name, professionalSpecialty, personalSpecialty, professionalSummary, per
   >
     {name}
   </h1>
-  <p id="hero-specialty-professional" class="mb-9 font-serif text-4xl leading-11.5 font-bold tracking-tighter text-primary sm:text-5xl md:text-6xl transition-opacity duration-300">
-    {professionalSpecialty}
-  </p>
+  <div id="hero-specialty-professional" class="mb-9 transition-opacity duration-300">
+    <p class="font-serif text-4xl leading-11.5 font-bold tracking-tighter text-primary sm:text-5xl md:text-6xl mb-2">
+      {professionalSpecialty}
+    </p>
+    {professionalSubtitle && (
+      <p class="text-xl md:text-xl text-white/80 font-medium tracking-tight">
+        {professionalSubtitle}
+      </p>
+    )}
+  </div>
   <p id="hero-specialty-personal" class="mb-9 font-serif text-4xl leading-11.5 font-bold tracking-tighter text-primary sm:text-5xl md:text-6xl hidden opacity-0 transition-opacity duration-300">
     {personalSpecialty}
   </p>

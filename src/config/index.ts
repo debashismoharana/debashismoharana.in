@@ -25,7 +25,8 @@ export const SITE_CONFIG: SiteConfig = {
 export const SITE_CONTENT: SiteContent = {
   hero: {
     name: "Debashis Moharana",
-    professionalSpecialty: "Senior Frontend Engineer",
+    professionalSpecialty: "Technology Professional",
+    professionalSubtitle: "Software Consultancy • Agentic AI • Web Development • Mobile Apps",
     personalSpecialty: "A Curious Human",
     professionalSummary:
       "I’m a Frontend Lead and software developer with over 10 years of experience architecting and building enterprise-grade applications. I enjoy designing scalable architectures, solving complex engineering problems, and building products that balance performance and usability. Over my career, I’ve worked across the full product lifecycle—from defining technical direction to mentoring teams and shipping robust production systems. Currently, I am exploring AI engineering and agentic automation to expand my capabilities beyond traditional development.",
