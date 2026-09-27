@@ -36,7 +36,7 @@ export const SITE_CONTENT: SiteContent = {
   experience: [
     {
       company: "Cybage Software",
-      position: "Senior Frontend Engineer / System Analyst",
+      position: "System Analyst / Senior Software Engineer",
       startDate: "Oct 2019",
       endDate: "Present",
       summary: [
@@ -50,7 +50,7 @@ export const SITE_CONTENT: SiteContent = {
     },
     {
       company: "Infosys Limited",
-      position: "Senior Systems Engineer",
+      position: "Senior Systems Engineer / Systems Engineer",
       startDate: "May 2015",
       endDate: "Oct 2019",
       summary: [
