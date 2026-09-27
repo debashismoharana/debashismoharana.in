@@ -27,9 +27,10 @@ export const SITE_CONTENT: SiteContent = {
     name: "Debashis Moharana",
     professionalSpecialty: "Technology Professional",
     professionalSubtitle: "Software Consultancy • Agentic AI • Web Development • Mobile Apps",
-    personalSpecialty: "A Curious Human",
+    personalSpecialty: "A Curious Human being",
+    personalSubtitle: "Mindful Traveller • Home Brewer • Wellness • Conscious Living",
     professionalSummary:
-      "I’m a Frontend Lead and software developer with over 10 years of experience architecting and building enterprise-grade applications. I enjoy designing scalable architectures, solving complex engineering problems, and building products that balance performance and usability. Over my career, I’ve worked across the full product lifecycle—from defining technical direction to mentoring teams and shipping robust production systems. Currently, I am exploring AI engineering and agentic automation to expand my capabilities beyond traditional development.",
+      "I’m a software developer with over 10 years of experience architecting and building enterprise-grade applications. I enjoy designing scalable architectures, solving complex engineering problems, and building products that balance performance and usability. Over my career, I’ve worked across the full product lifecycle—from defining technical direction to mentoring teams and shipping robust production systems. Currently, I am exploring AI engineering and agentic automation to expand my capabilities beyond traditional development.",
     personalSummary:
       "Outside of code, I’m drawn to things that combine creativity, exploration, and craft. I enjoy travelling, discovering heritage and culture, and creating visual stories through photography and short-form content. Specialty coffee is another obsession, and I enjoy experimenting with different beans, brewing methods, and the ritual of making a good cup. I also spend time with plants, home decor, fitness, yoga, and other creative projects that let me slow down and build something with my hands. I’m naturally curious and tend to go deep into whatever catches my interest, whether it’s learning a new technology, exploring a place, or understanding how something works.",
     email: "moharana.debashis@gmail.com",

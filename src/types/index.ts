@@ -30,6 +30,7 @@ export interface HeroProps {
   professionalSpecialty: string;
   professionalSubtitle?: string;
   personalSpecialty: string;
+  personalSubtitle?: string;
   professionalSummary: string;
   personalSummary: string;
   email: string;
