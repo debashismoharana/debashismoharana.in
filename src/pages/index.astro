@@ -43,7 +43,7 @@ const theOtherSideData = SITE_CONTENT.theOtherSide;
 
   <!-- Personal Content -->
   <div id="content-personal" class="hidden opacity-0 transition-opacity duration-300">
-    <section class="py-24">
+    <section class="py-12 md:py-16">
       <h2 class="mb-6 font-serif text-5xl font-bold tracking-tightest text-white sm:text-6xl">
         The Other Side
       </h2>
@@ -109,11 +109,18 @@ const theOtherSideData = SITE_CONTENT.theOtherSide;
       btnPersonal.classList.add('text-white');
       btnPersonal.classList.remove('text-[#12161d]');
 
+      const navProfItems = document.querySelectorAll('.nav-prof-item');
+      
       // Switch content & hero
       contentPersonal.classList.add('opacity-0');
       heroPersonal.classList.add('opacity-0');
       heroSpecialtyPersonal.classList.add('opacity-0');
       
+      navProfItems.forEach(item => {
+        item.classList.remove('hidden');
+        setTimeout(() => item.classList.remove('opacity-0'), 20);
+      });
+
       setTimeout(() => {
         contentPersonal.classList.add('hidden');
         heroPersonal.classList.add('hidden');
@@ -142,11 +149,18 @@ const theOtherSideData = SITE_CONTENT.theOtherSide;
       btnProfessional.classList.add('text-white');
       btnProfessional.classList.remove('text-[#12161d]');
 
+      const navProfItems = document.querySelectorAll('.nav-prof-item');
+      
       // Switch content & hero
       contentProfessional.classList.add('opacity-0');
       heroProfessional.classList.add('opacity-0');
       heroSpecialtyProfessional.classList.add('opacity-0');
       
+      navProfItems.forEach(item => {
+        item.classList.add('opacity-0');
+        setTimeout(() => item.classList.add('hidden'), 300);
+      });
+
       setTimeout(() => {
         contentProfessional.classList.add('hidden');
         heroProfessional.classList.add('hidden');
