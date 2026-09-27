@@ -28,6 +28,7 @@ export interface TheOtherSideProps {
 export interface HeroProps {
   name: string;
   professionalSpecialty: string;
+  professionalSubtitle?: string;
   personalSpecialty: string;
   professionalSummary: string;
   personalSummary: string;
